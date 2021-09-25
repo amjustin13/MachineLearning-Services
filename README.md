@@ -42,26 +42,34 @@ There are two main shortcomings of the current BLDUP service. First, it does not
 
 ** **
 ## 5. Acceptance criteria
-Minimum acceptance criteria is a  
-Stretch goals include:
 
+Research, architecture, train, and develop at least 2 machine learning models to enhance the BLDUP data processing pipeline. These models will serve as microservices that will interact with the current BLDUP framework. The machine learning models will enhance the BLDUP data processing pipeline by classifying public real estate transactions by different types of work. Additionally, the models will generate arbitrary images to be used as placeholders in the case that construction images are absent in the public database. 
+In general, we are going to use machine learning to finalize the BLDUP web platform. Currently, some of properties’ information is manually inputted and we want to train the models to reduce the labor during adding or updating new properties’ information to the website.
 
 ** **
 
 ## 6.  Release Planning:
-Sprint #1 ():
+Sprint #1 (20 Sep 2021 to 03 Oct 2021):
+- Explore BLDUPs platform
+- Understand the data acquired by BLDUP
+- Investigate and research classification algorithms
+- Identify at least 2 ML algorithms to implement
 
+Sprint #2 (04 Oct 2021 to 17 Oct 2021) - Subject to change:
+- Define design of API used to communicate with ML learning models
+- Create a simple initial skeleton of an API interface
+- Initial analysis of a least one machine learning model
 
-Sprint #2 ():
+Sprint #3 (18 Oct 2021 to 31 Oct 2021):
+TBD
 
+Sprint #4 (1 Nov 2021 to 14 Nov 2021):
+TDB
 
-Sprint #3 ():
+Sprint #5 (15 Nov 2021 to 28 Nov 2021):
+TBD
 
-
-Sprint #4 ():
-
-
-Sprint #4 ():
+Sprint #6 (29 Nov 2021 to 14 Dec 2021):
 Final Product
 
 ** **
