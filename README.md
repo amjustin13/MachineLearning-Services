@@ -60,8 +60,13 @@ Sprint #2 (04 Oct 2021 to 17 Oct 2021) - Subject to change:
 - Create a simple initial skeleton of an API interface
 - Initial analysis of a least one machine learning model
 
+- Demo2 Link: https://drive.google.com/file/d/1wfLV-DiJDwQIxkG1ziCiuqr1edmJ4VoB/view?usp=sharing
+
 Sprint #3 (18 Oct 2021 to 31 Oct 2021):
-TBD
+- Create DevOps/CI Framework in Github
+- Tune BERT model parameters
+- Formalize API implementation
+- Formalize and deploy ML microservice
 
 Sprint #4 (1 Nov 2021 to 14 Nov 2021):
 TDB
