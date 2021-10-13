@@ -26,6 +26,6 @@ def getPermit():
     for permit in permitData:
         if permit['id'] == id:
             return jsonify(permit)
-
+@app.route('/permit')
 if __name__ == '__main__':
     app.run(debug=True)
