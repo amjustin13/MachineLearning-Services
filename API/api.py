@@ -1,11 +1,14 @@
 import flask
 import json
 from flask import request, jsonify
+import tensorflow as tf
+import tensorflow_text
+import numpy as np
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 
-
-
+model = tf.saved_model.load("../../boston_DS_bert_noID/2")
+class_names = ["Amendment_to_a_Long_Form", "Certificate_of_Occupancy", "Electrical_Fire_Alarms", "Electrical_Low_Voltage", "Electrical_Permit", "Electrical_Temporary_Service", "Erect_New_Construction", "Excavation_Permit", "Foundation_Permit", "Gas_Permit", "Long_Form_Alteration_Permit", "Plumbing_Permit", "Short_Form_Bldg_Permit", "Use_of_Premises"]
 @app.route('/', methods=['GET'])
 def hello():
     return "Hello World!"
@@ -26,6 +29,15 @@ def getPermit():
     for permit in permitData:
         if permit['id'] == id:
             return jsonify(permit)
-@app.route('/permit')
+
+@app.route('/predict', methods=['POST'])
+def predict():
+    input = tf.constant(request.get_json()['instances'])
+    res = model(input)
+    max_ind = np.argmax(res.numpy(), axis=1)
+    ret = []
+    for idx in max_ind:
+        ret.append(class_names[idx])
+    return jsonify(ret)
 if __name__ == '__main__':
     app.run(debug=True)
