@@ -30,6 +30,14 @@ def getPermit():
         if permit['id'] == id:
             return jsonify(permit)
 
+"""
+expected request body:
+{
+    "instances": ["sample input string", "another sample input string"]
+}
+
+output: list of predictions 
+"""
 @app.route('/predict', methods=['POST'])
 def predict():
     input = tf.constant(request.get_json()['instances'])
