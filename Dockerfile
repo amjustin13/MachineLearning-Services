@@ -1,11 +1,17 @@
 # syntax=docker/dockerfile:1
-FROM python:3.7-alpine
-WORKDIR /code
+# Setup python
+FROM tensorflow/tensorflow:latest-gpu-jupyter
+RUN apt-get update -y && \
+    apt-get install -y apt-utils gfortran musl-dev gcc make g++ libffi-dev libxml2-dev \
+    libxml2 libxslt-dev
+RUN pip install --upgrade pip
+ADD requirements.txt .
+RUN pip install -r requirements.txt
+
+# Setup Flask app
+WORKDIR /app
 ENV FLASK_APP=app.py
 ENV FLASK_RUN_HOST=0.0.0.0
-RUN apk add --no-cache gcc musl-dev linux-headers
-COPY requirements.txt requirements.txt
-RUN pip install -r requirements.txt
 EXPOSE 5000
 COPY . .
 CMD ["flask", "run"]

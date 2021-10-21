@@ -1,5 +1,7 @@
 flask
-pandas
-matplotlib
 numpy
+matplotlib
+pandas
 tensorflow
+tensorflow-text
+tensorflow-gpu
