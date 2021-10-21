@@ -1,7 +1,7 @@
 # MachineLearning-InCommercialRealEstate
 ## 1. Vision and Goals Of The Project:
 
-Our goal is to help the BLDUP create a machine learning platform to analyze housing and construction project data. We will be adding several different machine learning models and deploying them as independent microservices exposed by a simple API interface. 
+Our goal is to help the BLDUP create a machine learning platform to analyze housing and construction project data. We will be adding several different machine learning models and deploying them as independent microservices exposed by a simple API interface.
 
 Goals:
 - Identify BLDUPs data analysis main shortcomings
@@ -13,7 +13,7 @@ Goals:
 
 ## 2. Users/Personas Of The Project:
 
-The BLDUP is a B2B platform for users who want to trade properties directly to the business owner or look for recent information about certain properties or construction projects. 
+The BLDUP is a B2B platform for users who want to trade properties directly to the business owner or look for recent information about certain properties or construction projects.
 
 It does target:
 - Individuals looking for new opportunities to trade/buy properties
@@ -43,7 +43,7 @@ There are two main shortcomings of the current BLDUP service. First, it does not
 ** **
 ## 5. Acceptance criteria
 
-Research, architecture, train, and develop at least 2 machine learning models to enhance the BLDUP data processing pipeline. These models will serve as microservices that will interact with the current BLDUP framework. The machine learning models will enhance the BLDUP data processing pipeline by classifying public real estate transactions by different types of work. Additionally, the models will generate arbitrary images to be used as placeholders in the case that construction images are absent in the public database. 
+Research, architecture, train, and develop at least 2 machine learning models to enhance the BLDUP data processing pipeline. These models will serve as microservices that will interact with the current BLDUP framework. The machine learning models will enhance the BLDUP data processing pipeline by classifying public real estate transactions by different types of work. Additionally, the models will generate arbitrary images to be used as placeholders in the case that construction images are absent in the public database.
 In general, we are going to use machine learning to finalize the BLDUP web platform. Currently, some of properties’ information is manually inputted and we want to train the models to reduce the labor during adding or updating new properties’ information to the website.
 
 ** **
@@ -91,3 +91,18 @@ pjd-nu or pjd@ccs.neu.edu
 
 Anqi Guo:
 anqianqi1
+
+# Running App in Docker Container
+
+- From within the directory containing the Dockerfile run the following to build the docker image:
+
+  - `docker build -t webapp-build:latest . `
+
+- You should see the image listed when running:
+  - `docker image ls`
+
+- Finally, in order to run the app:
+  - `docker run -d -p 5000:5000 webapp-build`
+
+- Now, the app should be availble at (use Postman or a browset to verify):
+  - `http://127.0.0.1:5000/`
