@@ -68,6 +68,8 @@ Sprint #3 (18 Oct 2021 to 31 Oct 2021):
 - Formalize API implementation
 - Formalize and deploy ML microservice
 
+- Demo3 Link: https://www.youtube.com/watch?v=P2m0KtebSH0
+
 Sprint #4 (1 Nov 2021 to 14 Nov 2021):
 TDB
 
