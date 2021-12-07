@@ -1,12 +1,15 @@
 # MachineLearning-InCommercialRealEstate
 ## 1. Vision and Goals Of The Project:
 
-Our goal is to help the BLDUP create a machine learning platform to analyze housing and construction project data. We will be adding several different machine learning models and deploying them as independent microservices exposed by a simple API interface.
+Our main goal is to help the BLDUP create a machine learning platform to analyze housing and construction project data.
+
+### MVP
+To implement and deploy a machine learning microservice onto the BLDUP platform that allows clients predict construction permit type from a given text description.
 
 Goals:
 - Identify BLDUPs data analysis main shortcomings
-- Create and train 2-4 machine learning models
-- Create web API to expose the models functionality
+- Create and train best identified machine learning model
+- Create web API to expose the model's functionality
 - Deploy all models as microservices that can be used by BLDUP to improve their platform
 
 ** **
@@ -25,16 +28,16 @@ It does target:
 
 ## 3.   Scope and Features Of The Project:
 This project will be scoped to the following:
-- Identifying several machine learning classification and estimation use cases with BLDUPs currently acquired data.
-- Training, testing and deploying at least 2-4 learning models.
-- Design and develop an API interface in order to extract data from the trained models.
-- Develop a microservice framework that can be used to deploy and maintain each of the machine learning models.
+- Identifying a machine learning classification and estimation use cases with BLDUPs currently acquired data.
+- Training, testing and deploying identified machine learning models.
+- Design and develop an API interface in order to extract data from the trained model.
+- Develop a microservice framework that can be used to deploy and maintain the machine learning model.
 
 ** **
 
 ## 4. Solution Concept
 High-level outline of the solution:
-There are two main shortcomings of the current BLDUP service. First, it does not classify different types of construction work well using the current data processing pipeline. Second, blank images are used as placeholders whenever the service isn’t able to find suitable images of the construction project. Machine learning can be used to mitigate these shortcomings. We plan to explore state of the art models (classification (regression, CNN, MLP)) to address the first project categorization problem. For the image generation goal, we plan to explore generative adversarial networks (GANs) to generate arbitrary images related to each individual type of real estate construction project.
+The main shortcoming of the current BLDUP service that we will be creating a solution for this semester . First, it does not classify different types of construction work well using the current data processing pipeline. Second, blank images are used as placeholders whenever the service isn’t able to find suitable images of the construction project. Machine learning can be used to mitigate these shortcomings. We plan to explore state of the art models (classification (regression, CNN, MLP)) to address the first project categorization problem. For the image generation goal, we plan to explore generative adversarial networks (GANs) to generate arbitrary images related to each individual type of real estate construction project.
 
 ![image](https://user-images.githubusercontent.com/13989262/134755362-64c80dae-68f2-41ce-995f-9d406209824e.png)
 ![image](https://user-images.githubusercontent.com/13989262/134755377-f13799d8-ee25-4ac5-9c58-3b55bb7cabb0.png)
@@ -43,8 +46,8 @@ There are two main shortcomings of the current BLDUP service. First, it does not
 ** **
 ## 5. Acceptance criteria
 
-Research, architecture, train, and develop at least 2 machine learning models to enhance the BLDUP data processing pipeline. These models will serve as microservices that will interact with the current BLDUP framework. The machine learning models will enhance the BLDUP data processing pipeline by classifying public real estate transactions by different types of work. Additionally, the models will generate arbitrary images to be used as placeholders in the case that construction images are absent in the public database.
-In general, we are going to use machine learning to finalize the BLDUP web platform. Currently, some of properties’ information is manually inputted and we want to train the models to reduce the labor during adding or updating new properties’ information to the website.
+Research and train a machine learning model to enhance the BLDUP data processing pipeline. These model will serve as microservices that will interact with the current BLDUP framework. The machine learning model will enhance the BLDUP data processing pipeline by classifying public construction permit data by different types of permit. Additionally, the model will be exposed through an API and integrated into the BLDUP platform.
+In general, we are going to use machine learning to enhance the BLDUP web platform. Currently, some of properties’ information is manually inputted and we want to train the models to reduce the labor during adding or updating new properties’ information to the website.
 
 ** **
 
@@ -71,10 +74,16 @@ Sprint #3 (18 Oct 2021 to 31 Oct 2021):
 - Demo3 Link: https://www.youtube.com/watch?v=P2m0KtebSH0
 
 Sprint #4 (1 Nov 2021 to 14 Nov 2021):
-TDB
+- Make API route more robust
+- Investigate implementation for DevOps/CI Framwork in Github
+- Regroup output categories of the costruction permit types to 4 general types (Building, Mechanical, Plumbing, Electrical)
+- Start research for image generation job
 
 Sprint #5 (15 Nov 2021 to 28 Nov 2021):
-TBD
+- Retrain model on heterogenous data
+- Divide data into pre-construction and post-construction sets.
+- Server authentication
+- Finalize deployment automation through bash script 
 
 Sprint #6 (29 Nov 2021 to 14 Dec 2021):
 Final Product
